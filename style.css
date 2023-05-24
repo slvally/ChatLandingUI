@@ -1,0 +1,152 @@
+/*===== BASE =====*/
+html {
+    scroll-behavior: smooth;
+}
+*,::before,::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    font-family: poppins;
+    color: var(--first-color);
+}
+h1{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/*=== Colores ===*/
+:root{
+    --first-color: #12192C;
+    --text-color: #00B0FF;
+}
+body::before {
+    display: block;
+    content: '';
+    height: 55px;
+}
+
+
+#section1 .container{
+    display: grid;
+    grid-template-rows: minmax(min-content, auto);
+    grid-column-gap: 6em;
+    justify-items:center;
+    align-items:center;
+    padding: 3em 0;
+}
+.section1-left {
+    display: none;
+}
+.section1-right h5 {
+    margin-top: 2em;
+    font-family: calibri;
+}
+.section1-right h1, .section1-right h5 {
+    text-align: center;
+}
+.section1-right button {
+    display: block;
+    margin: 0 auto;
+}
+#section2 ul{
+    list-style: none;
+}
+.check {
+    display: inline-block;
+    transform: rotate(45deg) scale(70%);
+    height: 24px;
+    width: 12px;
+    border-bottom: 7px solid #78b13f;
+    border-right: 7px solid #78b13f;
+}
+#pembungkus {
+    display: flex;
+    justify-content: center;
+}
+#pembungkus ul {
+    padding: 0;
+    margin: 0;
+}
+#pembungkus ul li {
+    text-align: start;
+}
+#pembungkus .kotak1, #pembungkus .kotak2 {
+    margin-right: 0.5em;
+}
+#pembungkus .kotak2 li {
+    margin-bottom: 8px;
+}
+#section2 .kotak1 ul li::before{
+    /* content: "✔️";
+    display: inline-block;
+    margin-right: 0.2rem; */
+}
+#section1 .section1-right .dwn{
+    display: block;
+    margin: 0 auto;
+}
+#section1 .section1-right .icon{
+    position: relative;
+    bottom: 5px;
+    right: 10px;
+}
+
+#section3 .illust1, #section3 .illust2  {
+    flex: 2;
+    width:  70%;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+}
+#section3 .illust1 {
+
+}
+#section3 .illust2 {
+
+    order: 2;
+}
+#section3 .text1, #section3 .text2 {
+    flex: 3;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+#section3 .text2 {
+    order: 1;
+}
+
+/*===== MEDIA QUERIS =====*/
+@media screen and (min-width: 992px){
+
+    #section1 .container{
+        grid-template-columns: 1fr 1fr;
+        padding-bottom: 0;
+    }
+    .section1-left {
+        display: block;
+    }
+    .section1-right h1, .section1-right h5 {
+        text-align:left;
+    }
+    #section1 .section1-right .dwn{
+        display: inline-block;
+    }
+    #section3 .illust1, #section3 .illust2  {
+        width:  100%;
+    }
+    #section3 .text1 {
+        text-align:start;
+    }
+    #section3 .text2 {
+        text-align:end;
+    }
+    
+}
+
